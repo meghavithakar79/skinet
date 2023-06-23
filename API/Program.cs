@@ -1,4 +1,3 @@
-
 using API.Middleware;
 using Infrastucture.Data;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +21,7 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
